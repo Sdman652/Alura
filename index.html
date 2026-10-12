@@ -14,11 +14,27 @@
             src: url("fonts/VCR.ttf") format("truetype");
         }
 
+        @font-face {
+            font-family: "ocean";
+            src: url("fonts/ocean.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "vanished";
+            src: url("fonts/vanished.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "stack";
+            src: url("fonts/stack.ttf") format("truetype");
+        }
+
         body {
             background-color: #0b0a14;
             margin: 0px;
-            
+
         }
+        <!-- desse cacete pra cima define as fonte dessa budega -->
 
         .background {
             width: 100vw;
@@ -40,9 +56,8 @@
             padding: 0px 30px;
             color: #e6dcff;
             background-color: rgba(11, 10, 20, 0.4);
-            border-radius: 0px;
-            top: 0;
             backdrop-filter: blur(10px);
+            max-height: 50px;
         }
 
         main {
@@ -51,11 +66,14 @@
         }
 
         .titulo {
-            font-size: 35px;
-            color: #6e33b0;
+            font-family: "ocean";
+            font-size: 60px;
+            color: #402162;
         }
 
         .paragrafotitulo {
+            font-family: "vanished";
+            margin-top: -60px;
             margin-bottom: 100px;
             font-size: 18px;
             color: #6e54c5;
@@ -64,6 +82,12 @@
         nav {
             display: flex;
             gap: 24px;
+        }
+
+        .nav {
+            font-family: "stack";
+            font-size: 15px;
+            color: #4c116e
         }
 
         .artigo {
@@ -82,6 +106,40 @@
             transition: all 0.4s ease-out;
         }
 
+        .fonte {
+            background-color: rgba(30, 22, 52, 0.65);
+            color: #e6dcff;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            border-color: rgba(216, 180, 254, 0.35);
+            max-width: 500px;
+            height: 70px;
+            margin: auto;
+            padding: 10px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .artigo .tituloartigo {
+            font-family: "stack";
+            font-size: 20px;
+        }
+
+        .fonte .tituloartigo {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .fonte .paragrafoartigo {
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        .fonte .imgfonte {
+            width: 70px;
+            height: 70px
+        }
 
         .artigo:hover {
             backdrop-filter: blur(5px);
@@ -99,14 +157,9 @@
             box-shadow: 0 0 10px rgba(3, 1, 6, 0.592);
         }
 
-        .tituloartigo {
-            font-size: 30px;
-            font-family: VCR;
-        }
 
         .paragrafoartigo {
-            font-weight: regular;
-            font-family: VCR;
+            font-family: "VCR";
             font-size: 20px;
         }
     </style>
@@ -119,26 +172,31 @@
     <img src="source/back.png" alt="fundo verde floresta." class="background">
 
 
-    <header>
-        <h1>Dreamcore</h1>
+    <header class="nav">
+        <h1>erocmaerd</h1>
         <nav>
             <a>Mudar tema</a>
         </nav>
     </header>
 
     <main>
-        <h2 class="titulo">Dreamcore</h2>
-        <p class="paragrafotitulo">Este é um Blog sobre Dreamcore</p>
+        <h2 class="titulo">DREAMCORE</h2>
+        <p class="paragrafotitulo">A ARTE DO VAZIO</p>
         <article class="artigo">
             <img src="source/LV1.jpg">
             <div>
                 <h3 class="tituloartigo">A cadeira sempre esteve aí</h3>
-                <p class="paragrafoartigo">Alguém levantou e nunca mais voltou.</p>
-                <p class="textoartigo">O vento não faz o menor som ao passar pela grama impecável que abriga uma
-                    simples cadeira de plástico branco no meio do nada. Você sente que deveria sentar sob
-                    essas nuvens perfeitamente desenhadas no céu azul e apenas esperar. O ambiente é
-                    iluminado e sereno demais para ser real, e a sensação constante de que você está sendo observado
-                    do alto destas colinas vazias só aumenta a cada segundo.</p>
+                <p class="paragrafoartigo">Você já se sentou aqui. Antes de saber o que era você.</p>
+                <p class="textoartigo">Você reconhece esta grama.
+                    Não porque já pisou nela. Mas porque ela já pisou em você.
+                    A cadeira está exatamente onde sempre esteve.
+                    Não foi deixada. Não foi esquecida.
+                    Ela foi colocada.
+                    E você sabe por quem.
+                    Pensa. Não pensa. Pensa.
+                    Você já esteve aqui.
+                    Não nesta vida.
+                    Antes.</p>
             </div>
         </article>
         <article class="artigo">
@@ -200,7 +258,24 @@
                     preso para sempre dentro desta memória fotográfica.</p>
             </div>
         </article>
+        <article class="fonte">
+            <img src="source/logodreamcore.png" class="imgfonte">
+            <div>
+                <h3 class="tituloartigo">Fontes:</h3>
+                <p class="paragrafoartigo">https://aesthetics.fandom.com/wiki/Dreamcore</p>
+            </div>
+        </article>
     </main>
 </body>
 
 </html>
+
+<!-- especifilidade é quando voce define algo por cima
+ tipo, 
+ .artigo
+ engloba todo o artigo
+ agora:
+ .artigo .imagem
+ so vai pegar as imagens dentro de artigo (lembrando que classe vira . no prefixo)
+ é isso dai, tomara que acabe logo essa misera eu nao aguento mais ver letrinha.
+ -->
